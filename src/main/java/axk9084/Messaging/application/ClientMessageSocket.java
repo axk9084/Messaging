@@ -34,7 +34,7 @@ public class ClientMessageSocket {
     try {
       doOnClose.call();
     } catch ( Exception e ) {
-      log.error( "{} failed to run callable on web socket close: {}", this.getClass().getName(), e );
+      log.error( "{} failed to run callable on web socket close", this.getClass().getName(), e );
     }
   }
 
@@ -51,7 +51,6 @@ public class ClientMessageSocket {
 
   void sendMessage( String message ) {
     log.debug( "Sending message to server: {}", message );
-    //todo error check future?
     if ( session != null ) {
       session.getRemote().sendStringByFuture( message );
     }

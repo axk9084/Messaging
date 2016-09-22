@@ -69,7 +69,7 @@ public class MessageClient {
         webSocketClient.connect( webSocket, serverEndpointURI, request );
       }
       catch ( IOException e ) {
-        e.printStackTrace();
+        log.error( "Failed to connect to server endpoint" );
       }
       return null;
     }

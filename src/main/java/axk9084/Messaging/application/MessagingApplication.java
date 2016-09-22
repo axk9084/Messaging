@@ -24,7 +24,7 @@ public class MessagingApplication extends Application<MessagingConfiguration> {
   public void run( MessagingConfiguration messagingConfiguration, Environment environment ) throws Exception {
     try {
       log.debug( "Adding servlet for server web socket" );
-      environment.servlets().addServlet( "Websocket", new ServerServlet() )
+      environment.servlets().addServlet( "Websocket", new ServerServlet( messagingConfiguration.getServerWSTimeoutInMin() ) )
           .addMapping( messagingConfiguration.getServerWSEndpoint() );
 
       log.debug( "Constructing a message client" );

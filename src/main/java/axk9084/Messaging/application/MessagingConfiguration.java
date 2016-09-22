@@ -15,6 +15,8 @@ public class MessagingConfiguration extends Configuration {
   @NotEmpty
   private String serverWSEndpointUriString;
 
+  private long serverWSTimeoutInMin;
+
   @JsonProperty
   public String getServerWSEndpoint() {
     return serverWSEndpoint;
@@ -33,5 +35,15 @@ public class MessagingConfiguration extends Configuration {
   @JsonProperty
   public void setServerWSEndpointUriString( String serverWSEndpointUriString ) {
     this.serverWSEndpointUriString = serverWSEndpointUriString;
+  }
+
+  @JsonProperty
+  public long getServerWSTimeoutInMin() {
+    return serverWSTimeoutInMin;
+  }
+
+  @JsonProperty
+  public void setServerWSTimeoutInMin( long serverWSTimeoutInMin ) {
+    this.serverWSTimeoutInMin = serverWSTimeoutInMin;
   }
 }

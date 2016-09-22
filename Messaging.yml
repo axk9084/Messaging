@@ -3,6 +3,7 @@
 #
 serverWSEndpoint: /websocket
 serverWSEndpointUriString: ws://localhost:8080/websocket
+serverWSTimeoutInMin: 10
 
 #
 # Server configuration
