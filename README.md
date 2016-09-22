@@ -15,5 +15,6 @@ WebSocket endpoint:
 
 Basic setup and startup steps:
 
-maven package
+mvn package
+
 java -jar target\Messaging-1.0-SNAPSHOT.jar server Messaging.yml
